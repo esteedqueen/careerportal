@@ -1,4 +1,5 @@
 Jobs = new Mongo.Collection('jobs');
+
 Jobs.attachSchema(new SimpleSchema({
 	jobtitle: {
 		type: String,

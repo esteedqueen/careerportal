@@ -13,3 +13,4 @@ accounts-base
 accounts-password
 ian:accounts-ui-bootstrap-3
 aldeed:collection2
+iron:router

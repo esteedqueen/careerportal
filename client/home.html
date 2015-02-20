@@ -1,0 +1,168 @@
+<head>
+  <title>Jobs board</title>
+</head>
+<template name="home">
+  {{> jumboBanner}}
+  <!-- {{> loginButtons}} -->
+  {{> addNewJob}}
+  {{> jobListing}}
+  
+  <!-- {{>jobListing}} -->
+</template>
+
+<template name="jumboBanner">
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>Be part of our MEST journey</h1>
+      <p>We are in exciting times at MEST. Do you want to join us for the ride?</p>
+    </div>
+  </div>
+</template>
+
+<template name="addNewJob">
+    <div class="container">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newjobModal">
+        Add New Job
+      </button>
+      {{> jobsForm}}
+
+    </div>
+</template>
+
+<template name="jobListing">
+  <div class="recent-job"><!-- start job finder -->
+      <div class="container">
+        
+        <h3>We need help in these key areas:</h3>
+        <!-- <hr> -->
+          <div id="tab-container" class='tab-container'><!-- Start Tabs -->
+          <ul class='etabs clearfix'>
+            <li class='tab'><a href="#all">All</a></li>
+            <li class='tab'><a href="#contract">Contract</a></li>
+            <li class='tab'><a href="#full">Full Time</a></li>
+            <li class='tab'><a href="#free">Freelence</a></li>
+          </ul>
+        </div>
+        <!-- <form>
+          <div class="col-md-5 form-group group-2" style="float:right;">
+            <input type="text" id="searchjob" class="input-job" placeholder="Keywords (IT Engineer, Shop Manager, Hr Manager...)">
+          </div>
+        </form> -->
+      </div>
+
+    <div class="container">
+
+    <div id="job-opening">
+          <!-- <div class="clearfix"></div>
+          <br/> -->
+          <div class="container"><!-- job opening carousel item -->
+            {{#each jobs}}
+
+            <div class="item-listing col-md-4">
+              <div class="job-opening">
+                <img src="images/upload/dummy-job-open-2.png" class="img-responsive" alt="job-opening" />
+                <div class="job-opening-content">
+                  {{jobtitle}}
+                  <p>
+                    {{summarizeDesc this.jobdescription 106}}
+                  </p>
+                </div>
+                <div class="job-opening-meta clearfix">
+                  <div class="meta-job-location meta-block"><button class="btn"><i class="fa-arrow-circle-right"></i>Read More</button></div>
+                  <div class="meta-job-type meta-block"><button class="btn"><i class="fa fa-share"></i>Share</button></div>
+                </div>
+              </div>
+            </div>
+            {{/each}}
+
+          
+          </div><!-- job opening carousel item -->
+        </div>
+    </div>
+
+    </div><!-- end job finder -->
+</template>
+
+<!-- <template name="jobListing">
+  <div class="container">
+    <h2>Job Listing</h2>
+    <hr>
+
+    
+
+    <div class="container">
+
+
+      
+      
+      {{#each jobs}}
+      
+      <div class="joblist">
+        <h2>{{jobtitle}}</h2>
+        <p>{{jobdescription}}</p>
+        <p>{{minrequirements}}</p>
+        <p>{{experience}}</p>
+        <p>{{deadline}}</p>
+
+
+      </div>
+
+      {{/each}}
+      
+      
+    </div>
+
+  </div>
+
+
+</template> -->
+
+<template name="jobItem">
+  <!-- {{#}} -->
+
+</template>
+
+<template name="jobsForm">
+  <!-- Modal -->
+  <div class="modal fade" id="newjobModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Fill in Job Details</h4>
+        </div>
+        <form>
+          <div class="modal-body">
+
+            {{> quickForm collection="Jobs" type="insert"}}
+
+            <!-- <div class="form-group">
+              <label for="inputJobTitle">Job Title</label>
+              <input type="text" class="form-control" id="inputJobTitle" placeholder="Enter Job Title">
+            </div>
+            <div class="form-group">
+              <label for="inputJobDesc">Job Description</label>
+              <textarea class="form-control" rows="3" id="inputJobDesc" placholder="Job Description"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="inputSalary">Salary</label>
+              <input type="text" class="form-control" id="inputSalary" placeholder="Enter Salary">
+            </div>
+            <div class="form-group">
+              <label for="inputQualification">Min. Qualifications</label>
+              <input type="text" class="form-control" id="inputQualification" placeholder="Enter Min Qualification">
+            </div>  -->           
+
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" id="submit-close">Submit</button>
+          </div> -->
+        </form>
+      </div>
+    </div>
+  </div>
+
+</template>
+
+
