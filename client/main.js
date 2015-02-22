@@ -1,5 +1,3 @@
-Meteor.subscribe('jobs');
-
 Template.registerHelper('jobs',function(){
 
   return Jobs.find().fetch();  

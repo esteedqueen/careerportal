@@ -52,6 +52,22 @@ Jobs.attachSchema(new SimpleSchema({
 			}]
 		}
 	},
+	jobType: {
+		type: String,
+		label: "Job Type",
+		autoform: {
+			options: [{
+				label: "Full Time",
+				value: "Full Time"
+			}, {
+				label: "Contract",
+				value: "Contract"
+			}, {
+				label: "Freelance",
+				value: "Freelance"
+			}]
+		}
+	},
 	deadline: {
 		type: Date,
 		label: "Application Deadline"
