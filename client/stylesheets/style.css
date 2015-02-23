@@ -1267,16 +1267,17 @@ nav{
 
 .job-detail h6{
 	font-family: 'Raleway', myriad pro, tahoma, sans-serif;
-	font-size:18px;
+	font-size:24px;
 	color:#565656;
 
 }
 
 .job-detail p{
 	font-family: 'Roboto', sans-serif;
-	font-size:14px;
+	font-size:16px;
 	color:#565656;
 	font-weight:300;
+	line-height: 18px;
 
 }
 

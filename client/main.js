@@ -12,6 +12,7 @@ UI.registerHelper('summarizeDesc', function(jobDescription, maxChar){
 
 });
 
+
 // Template.jobsForm.events({
 //   'submit form': function (e, t) {
 //     e.preventDefault();

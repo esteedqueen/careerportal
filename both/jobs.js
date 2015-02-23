@@ -52,7 +52,7 @@ Jobs.attachSchema(new SimpleSchema({
 			}]
 		}
 	},
-	jobType: {
+	jobtype: {
 		type: String,
 		label: "Job Type",
 		autoform: {

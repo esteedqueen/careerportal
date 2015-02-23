@@ -1,0 +1,54 @@
+<template name="jobsPage">
+    	{{> jobItem}}
+</template>
+
+<template name="jobItem">
+		<div class="main-page-title"><!-- start main page title -->
+			<div class="container">
+				<div class="recent-job-detail">
+					<div class="col-md-7 job-detail-desc">
+						<h5>{{jobtitle}}</h5>
+						
+					</div>
+					
+					<div class="col-md-2 job-detail-location">{{deadline}}	
+					</div>
+					<div class="col-md-3">
+						<div class="row">
+							<div class="col-md-7 job-detail-type">
+								<h6><i class="fa fa-user"></i> {{jobtype}}</h6>
+							</div>
+							<div class="col-md-5 job-detail-button">
+								<button class="btn-apply-job" >APPLY</button>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+
+				<div class="container row  job-detail">
+					<div class="container">
+						<h6>Job Description</h6>
+						<p>
+							{{jobdescription}}
+						</p>
+						<br>
+
+						<h6>Minimum Requirements</h6>
+						<ul class="style-list-1">
+							<li>{{minrequirements}} </li>
+						</ul>
+						<br>
+				
+						<h6>Years of Experience</h6>
+						<ul class="style-list-1">
+							<li>{{experience}}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+				<div class="spacer-1">&nbsp;</div>
+
+		</div>
+		
+</template>
